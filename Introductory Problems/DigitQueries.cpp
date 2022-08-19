@@ -4,19 +4,6 @@
 
 using namespace std;
 
-ll digits(ll i)
-{
-    ll count = 0;
-    while (i)
-    {
-        count++;
-        i /= 10;
-    }
-    return count;
-}
-
-// 9899100
-
 void solve()
 {
     ll n;
@@ -34,8 +21,7 @@ void solve()
         }
         else
         {
-            // cout << ans + n / i << " " << n % i << " " << i << "\n";
-            x=ans+n/i;
+            x=ans+n/i ;
             y=n%i;
             break;
         }
@@ -47,6 +33,7 @@ void solve()
     else
     {
         y=i-y;
+        x++;
         while(y--)
         x/=10;
         cout<<x%10<<"\n";
